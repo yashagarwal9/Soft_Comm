@@ -33,12 +33,13 @@ rice_wastage = data["Rice Wastage (food left over in the plates)"]
 #print (rice_wastage)
 day_crisp = np.zeros((day.size, 7), dtype=int)
 
-fresh_fuzzy = np.zeros((fresh.size, 3),  dtype=int)
+fresh_fuzzy = np.zeros((fresh.size, 3),  dtype=float)
 
 animals_crisp = np.zeros(animals.size, dtype=int)
 
 
-peeled = np.zeros((peeled.size, 3) ,dtype=int)
+peeled_fuzzy = np.zeros((peeled.size, 3) ,dtype=float)
+experience_fuzzy = np.zeros((peeled.size, 4) ,dtype=float)
 
 cleanliness_fuzzy = np.zeros((cleanliness.size, 3), dtype=float)
 
@@ -71,7 +72,7 @@ experience_fuzzy =  [experience_mem[exp_arr.index(i)] for i in expirence]
 
 final_data = [day_crisp[i]+fresh_fuzzy[i]+animals_crisp[i]+peeled_fuzzy[i]+cleanliness_fuzzy[i]+experience_fuzzy[i] for i in range(56)]
 final_data = np.array(final_data)
-
+print(final_data.shape)
 #wastage_mem = [[-1,-1,0.5], [-1,-0.5,0], [-0.5,0 0.5], [0,0.5, 1], [0.5, 1,1]]
 wastage = [[-1], [-0.5], [0], [0.5], [1]]
 
@@ -108,7 +109,10 @@ class NeuralNet(nn.Module):
         return out
     
 model = NeuralNet(input_size, hidden_size, num_classes)#.to(device)
+final_data = final_data.astype('float32')
 final_data = torch.from_numpy(final_data)
+print(final_data)
+wastage_output = wastage_output.astype('float32')
 wastage_output = torch.from_numpy(wastage_output)
 
 criterion = nn.CrossEntropyLoss()
@@ -119,6 +123,7 @@ for epoch in range(num_epochs):
     	#for i, (final_data, wastage_output) in enumerate(final_data):
         #final_data = final_data.to(device)
         #wastage_output = wastage_output.to(device)
+        print(final_data.shape)
         outputs = model(final_data)
         loss = criterion(outputs, wastage_output)
         optimizer.zero_grad()
