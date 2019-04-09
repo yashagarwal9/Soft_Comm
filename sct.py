@@ -71,10 +71,14 @@ exp_arr = ["<1 Year", "1-3 Years", "3-5 Years", ">5 Years"]
 experience_fuzzy =  [experience_mem[exp_arr.index(i)] for i in expirence]
 
 final_data = [day_crisp[i]+fresh_fuzzy[i]+animals_crisp[i]+peeled_fuzzy[i]+cleanliness_fuzzy[i]+experience_fuzzy[i] for i in range(56)]
+
+rng_state = np.random.get_state()
 final_data = np.array(final_data)
+np.random.shuffle(final_data)
+
 print(final_data.shape)
 #wastage_mem = [[-1,-1,0.5], [-1,-0.5,0], [-0.5,0 0.5], [0,0.5, 1], [0.5, 1,1]]
-wastage = [[-1], [-0.5], [0], [0.5], [1]]
+wastage = [[-2], [-0.1], [0], [0.1], [2]]
 
 wastage_arr = [1,2,3,4,5]
 
@@ -86,14 +90,16 @@ dal_wastage_output = [wastage[wastage_arr.index(i)] for i in dal_wastage]
 
 rice_wastage_output = [wastage[wastage_arr.index(i)] for i in rice_wastage] 
 
-wastage_output = [roti_wastage_output[i] + dal_wastage_output[i] + sabji_wastage_output[i] + rice_wastage_output[i] for i in range(56)]
+wastage_output = [roti_wastage_output[i] + sabji_wastage_output[i] + dal_wastage_output[i] + rice_wastage_output[i]  for i in range(56)]
+np.random.set_state(rng_state)
 wastage_output = np.array(wastage_output)
+np.random.shuffle(wastage_output)
 
 input_size = 21
-hidden_size = 40
+hidden_size = 80
 num_classes = 4
 learning_rate = 0.001
-num_epochs = 5
+num_epochs = 600
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 class NeuralNet(nn.Module):
@@ -108,14 +114,18 @@ class NeuralNet(nn.Module):
         out = self.fc2(out)
         return out
     
+nu = 50
 model = NeuralNet(input_size, hidden_size, num_classes)#.to(device)
 final_data = final_data.astype('float32')
-final_data = torch.from_numpy(final_data)
-print(final_data)
-wastage_output = wastage_output.astype('float32')
-wastage_output = torch.from_numpy(wastage_output)
+final_data_train = torch.from_numpy(final_data[0:50,:])
+final_data_test = torch.from_numpy(final_data[50:56,:])
 
-criterion = nn.CrossEntropyLoss()
+wastage_output = wastage_output.astype('float32')
+print(wastage_output[50:56,:])
+wastage_output_train = torch.from_numpy(wastage_output[0:50,:])
+wastage_output_test = torch.from_numpy(wastage_output[50:56,:])
+print(wastage_output_test.shape)
+criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(),lr = learning_rate)
 
 total_step = 56
@@ -124,8 +134,8 @@ for epoch in range(num_epochs):
         #final_data = final_data.to(device)
         #wastage_output = wastage_output.to(device)
         print(final_data.shape)
-        outputs = model(final_data)
-        loss = criterion(outputs, wastage_output)
+        outputs = model(final_data_train)
+        loss = criterion(outputs, wastage_output_train)
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
@@ -136,13 +146,48 @@ for epoch in range(num_epochs):
 with torch.no_grad():
     correct = 0 
     total = 0
-    for final_data, wastage_output in (test_loader):
-        final_data = final_data.to(device)
-        wastage_output = wastage_output.to(device)
-        outputs = model(final_data)
-        _, predicted = torch.max(outputs.data, 1)
-        total+=predicted.size(0)
-        correct += (predicted==wastage_output).sum()
-        
-    print('Accuracy of the network on the Training set: {} %'.format(100 * correct / total))
+    outputs = model(final_data_train)
+    outputs = np.array(outputs)
+    
 
+    print(outputs.shape, np.array(wastage_output_train).shape)
+    t = np.linspace(0, 2*outputs.shape[0], outputs.shape[0])
+    a = outputs[:,0]
+    b = np.array(wastage_output_train)[:,0]
+
+    a1 = outputs[:,1]
+    b1 = np.array(wastage_output_train)[:,1]
+
+    a2 = outputs[:,2]
+    b2 = np.array(wastage_output_train)[:,2]
+
+    a3 = outputs[:,3]
+    b3 = np.array(wastage_output_train)[:,3]
+
+
+
+
+# b = cos(t)
+
+plt.subplot(4,1,1)
+plt.scatter(t, a) # plotting t, a separately 
+plt.scatter(t, b,s=2,c="red") # plotting t, b separately 
+plt.plot(t, b, c="red") # plotting t, c separately 
+
+plt.subplot(4,1,2)
+plt.scatter(t, a1) # plotting t, a separately 
+plt.scatter(t, b1,s=2,c="red") # plotting t, b separately 
+plt.plot(t, b1, c="red") # plotting t, c separately 
+
+plt.subplot(4,1,3)
+plt.scatter(t, a2) # plotting t, a separately 
+plt.scatter(t, b2,s=2,c="red") # plotting t, b separately 
+plt.plot(t, b2, c="red") # plotting t, c separately 
+
+plt.subplot(4,1,4)
+plt.scatter(t, a3) # plotting t, a separately 
+plt.scatter(t, b3,s=2,c="red") # plotting t, b separately 
+plt.plot(t, b3, c="red") # plotting t, c separately 
+plt.show()
+        
+   
