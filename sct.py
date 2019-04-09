@@ -93,7 +93,6 @@ hidden_size = 40
 num_classes = 4
 learning_rate = 0.001
 num_epochs = 5
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size, num_classes):
@@ -125,8 +124,7 @@ for epoch in range(num_epochs):
         loss.backward()
         optimizer.step()
         #if (i+1) % 10 == 0:
-        print ('Epoch [{}/{}], Iteration [{}/{}], Loss: {:.4f}' 
-                   .format(epoch+1, num_epochs, 1, total_step, loss.item()))
+        print ('Epoch [{}/{}], Iteration [{}/{}], Loss: {:.4f}'.format(epoch+1, num_epochs, 1, total_step, loss.item()))
 
 with torch.no_grad():
     correct = 0 
