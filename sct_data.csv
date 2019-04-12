@@ -1,0 +1,58 @@
+Timestamp,Hall,Your Name,Which Meal of the day is it?,What Day is it today?,What was the condition of the vegetables before cooking?,Quality of ingredients used in making food,How experienced is the mess worker who is cooking the food?,Were the vegetables washed and peeled properly?,Is the mess free from animals like cats and dogs?,How would you rate the overall cleanliness of the mess?,"Was there any event on the previous day?(End of exams, Festivals, Hall days etc.)","Is there any event today? ( Hall day, Festival, End of Exams etc.)",How are the weather conditions ?,Why do you think there will be food wastage in your mess today?,Roti / Paratha wastage (food left over in the plates),Dal wastage (food left over in the plates),Sabji wastage (food left over in the plates),Rice Wastage (food left over in the plates),Roti / Paratha wastage (food not taken),Dal wastage (food not taken),Sabji wastage (food not taken),Rice Wastage (food not taken)
+3/27/2019 18:50:32,Azad,Lavkush Kumar,Dinner,Wednesday,Fresh,3,3-5 Years,Yes,No,Average,No,No,Sunny,Cold Food,5,1,2,1,1,1,1,1
+3/27/2019 18:59:19,Azad,Aman,Dinner,Wednesday,Stale,3,>5 Years,No,No,Average,No,No,Sunny,Bad Taste,3,3,3,3,4,4,4,4
+3/27/2019 19:03:00,Azad,Prudhvi,Dinner,Wednesday,Fresh,2,<1 Year,Yes,No,Average,No,No,Cold,Bad Taste,5,5,4,2,3,5,2,1
+3/27/2019 19:10:51,Azad,brajesh chandra jha,Dinner,Wednesday,Stale,3,3-5 Years,Yes,No,Average,No,No,Sunny,Bad Taste,4,4,4,4,4,3,3,3
+3/27/2019 19:28:27,Azad,Sunit Kumar singha,Dinner,Wednesday,Stale,2,3-5 Years,No,No,Average,No,No,Sunny,Bad Taste,5,2,3,3,3,3,4,5
+3/27/2019 20:02:16,Azad,Anshuman Agrawal,Dinner,Wednesday,Fresh,4,3-5 Years,Yes,Yes,Average,No,No,Sunny,"Cold Food, Bad Taste",2,1,4,1,1,2,4,1
+3/27/2019 20:18:12,Azad,Harshit Choudhary,Dinner,Wednesday,Stale,2,3-5 Years,Yes,No,Dirty,No,No,Sunny,Bad Taste,3,3,5,2,2,2,3,2
+3/27/2019 20:38:07,Azad,Aryendra Singh,Dinner,Wednesday,Fresh,4,>5 Years,Yes,Yes,Excellent,No,No,Sunny,Not much wasted anyway.,1,2,2,2,1,1,1,1
+3/27/2019 21:09:17,Azad,Jalaj patidar,Dinner,Wednesday,Fresh,3,>5 Years,Yes,No,Average,No,No,Sunny,Cold Food,2,1,2,2,2,2,2,2
+3/27/2019 21:10:16,Azad,Rishabh Srivastava,Dinner,Wednesday,Fresh,4,>5 Years,Yes,No,Average,No,No,Sunny,Bad Taste,3,4,4,3,1,3,3,3
+03/04/2019 20:00:15,HJB,P SAI TEJA,Dinner,Tuesday,Fresh,4,>5 Years,Yes,Yes,Average,No,No,Sunny,Bad Taste,2,1,4,2,2,2,3,2
+04/04/2019 00:30:28,HJB,P SAI TEJA,Dinner,Wednesday,Fresh,4,>5 Years,Yes,Yes,Average,No,No,Sunny,Bad Taste,2,2,1,2,2,3,1,4
+05/04/2019 16:54:53,HJB,P SAI TEJA,Dinner,Thursday,Fresh,4,>5 Years,Yes,Yes,Average,No,No,Sunny,Bad Taste,2,2,2,3,3,3,4,3
+3/25/2019 20:59:25,LBS,Dipayan Chakraborty,Dinner,Monday,Fresh,4,3-5 Years,Yes,Yes,Average,No,No,Sunny,Due to some external factor like some event.,3,3,3,3,3,3,3,3
+3/25/2019 21:04:05,LBS,Deeptayan Datta,Dinner,Monday,Fresh,4,3-5 Years,Yes,Yes,Excellent,No,No,Sunny,Due to some external factor like some event.,2,2,2,2,2,2,2,2
+3/28/2019 19:44:40,LBS,Mayukh Roy,Dinner,Thursday,Fresh,4,3-5 Years,No,No,Average,No,No,Sunny,Bad Taste,3,4,4,2,4,4,4,4
+3/28/2019 21:15:40,LBS,PANKAJ KUMAR,Dinner,Thursday,Fresh,4,3-5 Years,Yes,Yes,Average,No,No,Sunny,Due to some external factor like some event.,2,2,3,3,3,2,2,3
+3/28/2019 21:21:39,LBS,Abhishek Kumar ANSH,Dinner,Thursday,Fresh,4,>5 Years,Yes,No,Average,No,No,Sunny,Cold Food,4,4,4,4,4,4,4,4
+3/29/2019 20:14:15,LBS,Subham Saha,Dinner,Friday,Fresh,4,1-3 Years,No,No,Average,No,No,Sunny,Bad Taste,3,3,3,3,3,3,2,3
+3/30/2019 22:09:06,LBS,Mohammad Ayyub,Dinner,Saturday,Fresh,3,3-5 Years,Yes,No,Average,No,No,Sunny,Saturday food is not considered good,4,3,3,3,4,3,3,2
+02/04/2019 00:22:52,LBS,Shouvik Sadhukhan,Dinner,Monday,Fresh,5,3-5 Years,Yes,Yes,Average,No,No,Cloudy,Bad Taste,1,1,4,1,1,1,1,1
+04/04/2019 00:39:24,LBS,Devendra Kumar,Dinner,Wednesday,Stale,3,<1 Year,No,No,Average,No,No,Sunny,"Cold Food, Bad Taste",1,2,3,3,2,3,4,4
+03/04/2019 12:19:58,Nehru,Pulkit,Dinner,Wednesday,Fresh,4,3-5 Years,Yes,No,Average,No,No,Sunny,Bad Taste,3,2,4,2,1,2,3,3
+3/27/2019 20:28:20,R.P,Aditya khandelwal,Dinner,Wednesday,Fresh,4,>5 Years,Yes,No,Average,Yes,Yes,Sunny,Bad Taste,1,1,2,1,1,3,1,2
+3/28/2019 16:44:56,R.P,Ankur narayan,Dinner,Wednesday,Fresh,5,>5 Years,Yes,No,Average,No,No,Sunny,Very less westage today,3,4,1,1,1,2,2,2
+3/28/2019 16:45:07,R.P,Ankur narayan,Dinner,Wednesday,Fresh,5,>5 Years,Yes,No,Average,No,No,Sunny,Very less westage today,3,4,1,1,1,2,2,2
+3/27/2019 19:58:15,R.P,Himanshu Dinesh Mate,Dinner,Wednesday,Fresh,4,>5 Years,Yes,No,Average,No,No,Cloudy,Supply is more than the requirements.,2,1,4,4,1,3,3,3
+3/31/2019 7:59:02,SN/IG Hall of Residence,Harshini Reddy Palreddy,Dinner,Friday,Fresh,5,>5 Years,Yes,Yes,Average,No,No,Cold,-,1,1,1,1,1,1,1,1
+3/31/2019 8:10:39,SN/IG Hall of Residence,Harshini Reddy Palreddy,Dinner,Saturday,Fresh,5,>5 Years,Yes,Yes,Average,No,Yes,Cold,Bad Taste,1,1,2,1,1,1,3,1
+03/04/2019 12:39:53,SN/IG Hall of Residence,Harshini Reddy Palreddy,Dinner,Sunday,Fresh,5,>5 Years,Yes,Yes,Average,Yes,No,Cold,Special dinner but one item had bad taste,1,1,2,1,1,2,2,1
+03/04/2019 13:06:29,SN/IG Hall of Residence,Harshini Reddy Palreddy,Dinner,Monday,Fresh,5,>5 Years,Yes,Yes,Average,No,No,Cold,No reason,1,1,1,1,1,1,1,1
+03/04/2019 13:13:44,SN/IG Hall of Residence,Harshini Reddy Palreddy,Dinner,Tuesday,Fresh,5,3-5 Years,Yes,Yes,Average,No,No,Cold,Cold Food,1,1,1,1,1,1,1,1
+03/04/2019 21:15:20,SN/IG Hall of Residence,Harshini Reddy Palreddy,Dinner,Wednesday,Fresh,5,3-5 Years,Yes,Yes,Average,No,No,Cold,Rice not cooked properly,1,1,1,2,1,2,1,3
+05/04/2019 06:45:56,SN/IG Hall of Residence,Harshini Reddy Palreddy,Dinner,Thursday,Fresh,5,3-5 Years,Yes,Yes,Average,No,No,Cloudy,None,1,1,1,1,1,1,1,1
+3/27/2019 21:34:46,Azad,Chetan Deshmukh,Lunch,Thursday,Fresh,2,3-5 Years,Yes,No,Dirty,No,No,Sunny,Bad Taste,3,3,4,4,4,4,4,5
+3/29/2019 13:26:17,HJB,Shubhram Bhattacharys,Lunch,Friday,Fresh,4,>5 Years,Yes,No,Average,No,No,Sunny,Irregularity among consumers,3,3,2,1,2,1,1,2
+3/22/2019 14:10:17,LBS,Anshul Pal,Lunch,Friday,Fresh,4,>5 Years,Yes,No,Average,Yes,No,Sunny,Bad Taste,3,3,4,4,,,,
+3/22/2019 14:12:03,LBS,Shubham Agarwal,Lunch,Friday,Fresh,4,3-5 Years,Yes,Yes,Average,Yes,No,Sunny,Due to some external factor like some event.,3,2,3,2,2,2,2,2
+3/22/2019 14:21:53,LBS,Stanchion Bishoyi,Lunch,Friday,Fresh,5,1-3 Years,Yes,No,Average,Yes,No,Sunny,people are not fond of the menu item plus in later half food becomes cold,2,1,4,3,3,3,3,3
+3/24/2019 14:16:30,LBS,SATYABRAT BEHERA,Lunch,Sunday,Fresh,4,1-3 Years,Yes,Yes,Average,No,No,Sunny,Bad Taste,1,1,1,2,,,,2
+3/25/2019 14:20:37,LBS,Debanjan Datta,Lunch,Monday,Fresh,3,1-3 Years,Yes,No,Average,No,No,Sunny,Bad Taste,3,3,3,3,3,3,3,3
+3/25/2019 18:08:57,LBS,Manojit chowdhury,Lunch,Monday,Fresh,5,3-5 Years,Yes,Yes,Excellent,No,No,Sunny,Cold Food,2,2,3,2,2,3,3,3
+3/25/2019 18:10:31,LBS,Krishna Mondal,Lunch,Monday,Fresh,4,3-5 Years,Yes,Yes,Excellent,No,No,Sunny,Cold Food,2,1,4,2,2,3,3,3
+3/28/2019 14:41:06,LBS,K Rajesh,Lunch,Thursday,Fresh,4,3-5 Years,Yes,Yes,Average,No,No,Sunny,Bad Taste,2,4,4,3,1,1,1,3
+3/29/2019 18:31:32,LBS,Lucky Soni,Lunch,Friday,Fresh,4,1-3 Years,Yes,No,Average,No,No,Sunny,Bad Taste,2,2,2,2,2,3,2,2
+05/04/2019 15:08:29,LBS,Devendra,Lunch,Friday,Fresh,3,3-5 Years,Yes,No,Excellent,No,No,Sunny,"Bad Taste, Overwstimation of ingredients by mess authority",1,5,5,3,2,5,4,5
+03/04/2019 12:07:30,Nehru,Mayank Priyadarshi,Lunch,Wednesday,Fresh,5,1-3 Years,Yes,No,Average,No,No,Sunny,Due to some external factor like some event.,3,1,2,1,1,1,1,1
+05/04/2019 09:59:20,Nehru,aryan,Lunch,Friday,Fresh,4,>5 Years,Yes,Yes,Excellent,No,No,Sunny,weekend,1,1,1,1,1,2,2,2
+06/04/2019 12:59:25,Nehru,SHIVAM SHRIVASTAVA,Lunch,Saturday,Fresh,4,>5 Years,Yes,No,Average,No,No,Sunny,DUE TO WEEKEND,3,3,3,3,1,2,2,2
+3/26/2019 13:15:13,R.P,Goutam Mandal,Lunch,Tuesday,Fresh,4,1-3 Years,Yes,Yes,Average,No,No,Sunny,Bad Taste,2,1,3,1,,,,
+3/30/2019 9:48:17,SN/IG Hall of Residence,Harshini Reddy Palreddy,Lunch,Friday,Fresh,5,>5 Years,Yes,Yes,Average,No,No,Sunny,People suddenly decide to eat outside the hall due to various reasons,1,1,1,1,1,1,2,1
+3/31/2019 8:07:07,SN/IG Hall of Residence,Harshini Reddy Palreddy,Lunch,Saturday,Fresh,5,>5 Years,Yes,Yes,Average,No,Yes,Sunny,Due to some external factor like some event.,1,1,1,1,1,1,2,1
+4/8/2019 16:37:05,LBS,Devendra,Lunch,Monday,Fresh,4,3-5 Years,Yes,Yes,Excellent,No,No,Sunny,Cold Food,2,3,1,2,1,3,2,1
+4/8/2019 20:52:42,LBS,Devendra,Dinner,Monday,Fresh,3,3-5 Years,Yes,Yes,Average,No,No,Sunny,"Bad Taste, oily vegetable",1,3,4,2,1,3,3,2
+4/9/2019 17:28:48,LBS,Devendra,Lunch,Tuesday,Fresh,4,3-5 Years,Yes,Yes,Excellent,No,No,Sunny,Cold Food,1,2,1,1,1,3,2,1
+4/9/2019 20:17:38,Nehru,Akash Dusane,Dinner,Tuesday,Fresh,4,3-5 Years,Yes,No,Excellent,No,No,Raining,Due to some external factor like some event.,1,1,1,2,2,1,1,1
+4/9/2019 20:17:38, Nehru	,Akash Dusane,Dinner,Tuesday,Fresh,5,3-5 Years,Yes,Yes,Excellent,No,No,	Raining,Due to some external factor like some event.,1,1,1,2,2,1,1,1
