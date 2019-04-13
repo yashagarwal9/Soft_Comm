@@ -1,2 +1,33 @@
-Name, Roll_No, Hall, Weekday, Meal, Freshness, Experience, Washed_Peeled, Animals, Cleanliness, comments
-Yash Agarwal,16IE10032,BRH,Monday,Breakfest,Stale,1 Year,Yes,Yes,Excellent,Come on Nigga work 
+Name,Roll_No,Hall,Weekday,Meal,Freshness,Experience,Animals,Cleanliness,comments,quality
+Barai,CE,HG,Tuesday,Lunch,Fresh ,3-5 Year,No,Dirty,Bad Taste,2
+Barai,CE,HG,Tuesday,Lunch,Fresh ,5 Year,No,Dirty,Bad Taste,2
+Vidit,16IE10031,Lbs,Monday,Lunch,Stale,1-3 Year,No,Excellent,Bad Taste,5
+Vidit,16IE10031,Lbs,Monday,Lunch,Stale,3-5 Year,No,Excellent,Bad Taste,5
+Vidit,16IE10031,Lbs,Monday,Lunch,Stale,1 Year,No,Excellent,Bad Taste,5
+Barai,CE,HG,Tuesday,Lunch,Fresh ,3-5 Year,No,Dirty,Bad Taste,2
+Barai,CE,HG,Tuesday,Lunch,Stale,1 Year,No,Excellent,Bad Taste,5
+Barai,CE,HG,Tuesday,Lunch,Stale,5 Year,No,Excellent,Bad Taste,5
+Barai,CE,HG,Tuesday,Lunch,Stale,3-5 Year,No,Excellent,Bad Taste,5
+Barai,CE,HG,Tuesday,Lunch,Stale,5 Year,No,Excellent,Bad Taste,5
+Barai,CE,HG,Tuesday,Lunch,Stale,1-3 Year,No,Excellent,Bad Taste,5
+Barai,CE,HG,Tuesday,Lunch,Stale,1-3 Year,No,Excellent,Bad Taste,4
+Barai,CE,HG,Tuesday,Lunch,Stale,3-5 Year,No,Excellent,Bad Taste,4
+Barai,CE,HG,Tuesday,Lunch,Stale,3-5 Year,No,Excellent,Bad Taste,1
+Barai,CE,HG,Tuesday,Lunch,Stale,5 Year,No,Excellent,Bad Taste,1
+Barai,CE,HG,Tuesday,Lunch,Stale,3-5 Year,No,Excellent,Bad Taste,1
+Barai,CE,HG,Tuesday,Lunch,Stale,3-5 Year,No,Excellent,fd,1
+Barai,CE,HG,Tuesday,Lunch,Fresh ,5 Year,Yes,Excellent,fd,5
+s,das,ds,Tuesday,Breakfest,Fresh ,3-5 Year,Yes,Excellent,va,4
+s,das,ds,Tuesday,Breakfest,Fresh ,5 Year,Yes,Average,Bad Taste,4
+s,das,ds,Tuesday,Breakfest,Fresh ,5 Year,Yes,Average,Bad Taste,4
+Aditya,16IE10031,HJB,Monday,Snacks,Fresh ,5 Year,Yes,Average,Bad Taste,4
+Aditya,16IE10031,HJB,Monday,Snacks,Fresh ,5 Year,Yes,Average,Bad Taste,4
+Aditya,16IE10031,HJB,Monday,Snacks,Fresh ,5 Year,Yes,Average,Bad Taste,4
+Aditya,16IE10031,HJB,Monday,Snacks,Fresh ,5 Year,Yes,Average,Bad Taste,4
+Aditya,16IE10031,HJB,Monday,Snacks,Fresh ,3-5 Year,Yes,Average,Bad Taste,4
+Aditya,16IE10031,HJB,Monday,Snacks,Fresh ,3-5 Year,Yes,Average,Bad Taste,3
+Pulkit Singhal,16EE10032,BRH,Wednesday,Lunch,Fresh ,3-5 Year,No,Dirty,Yo,3
+yash agarwal,16IE10032,BRH,Saturday,Lunch,Stale,3-5 Year,No,Average,Bad taste,4
+yash agarwal,16IE10032,BRH,Saturday,Lunch,Stale,3-5 Year,No,Average,Bad taste,4
+yash agarwal,16IE10032,BRH,Saturday,Lunch,Stale,3-5 Year,No,Excellent,Bad taste,4
+sdsd,16IE10002,BRH,Monday,Breakfest,Stale,1 Year,Yes,Excellent,poiuytrew,1

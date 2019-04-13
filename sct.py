@@ -100,7 +100,7 @@ def create_data(file_h):
     rice_wastage_output = np.array([wastage[wastage_arr.index(i)] for i in rice_wastage]) 
 
     wastage_output = np.add(0.4*roti_wastage_output, 0.6*sabji_wastage_output)#, np.add(0.1*dal_wastage_output, 0.1*rice_wastage_output)) #[roti_wastage_output[i] + sabji_wastage_output[i] + dal_wastage_output[i] + rice_wastage_output[i]  for i in range(7)]
-    
+    print (final_data.shape)
     return final_data, wastage_output
 
 final_data, wastage_output = create_data("sct_data.csv")

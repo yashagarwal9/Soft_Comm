@@ -1,64 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-{% csrf_token %}
-{% load static %}
-
-	<title>Contact V15</title>
+	<title>Mess_Food_Analysis</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+{% load static %}
+<!-- 	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+ --><!--============================================================================ ===================-->
+<!-- {% load static %}
+ -->	<!-- <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+ --><!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+ --><!--===============================================================================================-->
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}"> -->
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!-- 	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+ -->	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 <!--===============================================================================================-->
 </head>
 <body>
 
 
 	<div class="container-contact100">
-		<div class="contact100-map" style="background-image: url(images/bg-07.jpeg);" ></div>
+		<div class="contact100-map" style="background-image: url({% static 'images/bg-07.jpeg' %});" ></div>
 
 		<div class="wrap-contact100">
-			<div class="contact100-form-title" style="background-image: url(images/bg-04.jpg);">
+			<div class="contact100-form-title" style="background-image: url({% static 'images/bg-04.jpg' %});">
 				<span class="contact100-form-title-1">
 					Mess Food Analysis
 				</span>
-
 				<span class="contact100-form-title-2">
 					Feel free to drop us a line below!
 				</span>
 			</div>
 
-			<form class="contact100-form validate-form">
+			<form class="contact100-form validate-form" action="/process" method="post">
+				{% csrf_token %}
 				<div class="wrap-input100 validate-input" data-validate="Name is required">
 					<span class="label-input100">Name:</span>
-					<input class="input100" type="text" name="name" placeholder="Enter full name">
+					<input class="input100" type="text" name="Name" placeholder="Enter full name">
 					<span class="focus-input100"></span>
 				</div>
 
 				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 					<span class="label-input100">Roll No:</span>
-					<input class="input100" type="text" name=Roll_No placeholder="Enter Roll Number,">
+					<input class="input100" type="text" name=Roll_No placeholder="Enter Roll Number">
 					<span class="focus-input100"></span>
 				</div>
 
@@ -68,7 +65,7 @@
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="wrap-input10 validate-input" data-validate = "Message is required">
+				<div class="wrap-input10" required data-validate = "Message is required">
 					<span class="label-input100">Week Day:</span>
 					<label class = input100>
 					<select name="Weekday">
@@ -84,7 +81,7 @@
                 	</label>
 					<span class="focus-input100"></span>
 				</div>
-				<div class="wrap-input10 validate-input" data-validate = "Message is required">
+				<div class="wrap-input10" required data-validate = "Message is required">
 					<span class="label-input100">Meal of the day:</span><br>
 					<label class = input100>
 					<input type="radio" name="Meal" value="Breakfest"> Breakfest &emsp;
@@ -94,7 +91,7 @@
 	                </label>        
 					<span class="focus-input100"></span>
 				</div>
-				<div class="wrap-input10 validate-input" data-validate = "Message is required">
+				<div class="wrap-input10" required data-validate = "Message is required">
 					<span class="label-input100">What was the condition of the vegetables before cooking?</span><br>
 					<label class = input100>
 					<input type="radio" name="Freshness" value="Stale"> Stale  &emsp;
@@ -102,25 +99,36 @@
                 	</label>
 					<span class="focus-input100"></span>
 				</div>
-				<div class="wrap-input10 validate-input" data-validate = "Message is required">
-					<span class="label-input100">How experienced is the mess worker who is cooking the food?</span><br>
+				<div class="wrap-input10" required data-validate = "Message is required">
+					<span class="label-input100">How is the quality of ingredients used?</span><br>
 					<label class = input100>
-					<input type="radio" name="Experience" value="1 Year"> &lt; 1 year&emsp;
-                	<input type="radio" name="Experience" value="1-3 Year"> 1-3 year&emsp;
-                	<input type="radio" name="Experience" value="3-5 Year"> 3-5 year&emsp;
-                	<input type="radio" name="Experience" value="5 Year"> &gt; 5 year<br>
+					<input type="radio" name="quality" value="1"> Very Bad&emsp;
+                	<input type="radio" name="quality" value="2"> Bad&emsp;
+                	<input type="radio" name="quality" value="3"> Average&emsp;
+                	<input type="radio" name="quality" value="4"> Good&emsp;
+                	<input type="radio" name="quality" value="5"> Very Good<br>
                 	</label>
 					<span class="focus-input100"></span>
 				</div>
-				<div class="wrap-input10 validate-input" data-validate = "Message is required">
+				<div class="wrap-input10" required data-validate = "Message is required">
+					<span class="label-input100">How experienced is the mess worker who is cooking the food?</span><br>
+					<label class = input100>
+					<input type="radio" name="Experience" value="1 Year"> &lt; <1 year&emsp;
+                	<input type="radio" name="Experience" value="1-3 Year"> 1-3 year&emsp;
+                	<input type="radio" name="Experience" value="3-5 Year"> 3-5 year&emsp;
+                	<input type="radio" name="Experience" value="5 Year"> &gt; >5 year<br>
+                	</label>
+					<span class="focus-input100"></span>
+				</div>
+				<!-- <div class="wrap-input10" required data-validate = "Message is required">
 					<span class="label-input100">Were the vegetables washed and peeled properly?</span><br>
 					<label class = input100>
 					<input type="radio" name="Washed_Peeled" value="Yes"> Yes&emsp;
                 	<input type="radio" name="Washed_Peeled" value="No"> No<br>
                 	</label>
 					<span class="focus-input100"></span>
-				</div>
-				<div class="wrap-input10 validate-input" data-validate = "Message is required">
+				</div> -->
+				<div class="wrap-input10" required data-validate = "Message is required">
 					<span class="label-input100">Is the mess free from animals like cats and dogs?</span><br>
 					<label class = input100>
 					<input type="radio" name="Animals" value="Yes"> Yes&emsp;
@@ -128,7 +136,7 @@
                 	</label>
 					<span class="focus-input100"></span>
 				</div>
-				<div class="wrap-input10 validate-input" data-validate = "Message is required">
+				<div class="wrap-input10" required data-validate = "Message is required">
 					<span class="label-input100">How would you rate the overall cleanliness of the mess?</span><br>
 					<label class = input100>
 					<input type="radio" name="Cleanliness" value="Excellent"> Excellent&emsp;
@@ -137,7 +145,7 @@
                 	</label>
 					<span class="focus-input100"></span>
 				</div>
-				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+				<div class="wrap-input100 validate-input"  data-validate = "Message is required">
 					<span class="label-input100">Comment:</span><br>
 					<textarea name="comments" class="input100" rows="3" placeholder = "According to you, What could be the reasons for wastage of food?"></textarea>
 					<span class="focus-input100"></span>
@@ -156,37 +164,37 @@
 
 
 
-	<div id="dropDownSelect1"></div>
+<!-- 	<div id="dropDownSelect1"></div>
+ -->
+<!--===============================================================================================-->
+<!-- 	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+ --><!--===============================================================================================-->
+<!-- 	<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+ --><!--===============================================================================================-->
+	<!-- <script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script> -->
+<!--===============================================================================================-->
+	<!-- <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
 
+	<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script> -->
 <!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="js/map-custom.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
+<!-- 	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+ --><!--===============================================================================================-->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes' %}"></script> -->
+<!-- 	<script src="{% static 'js/map-custom.js' %}"></script>
+ --><!--===============================================================================================-->
+<!-- 	<script src="{% static 'js/main.js' %}"></script>
+ -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-23581568-13');
-	</script>
+	</script> -->
 
 </body>
 </html>
